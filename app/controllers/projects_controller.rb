@@ -23,6 +23,22 @@ class ProjectsController < ApplicationController
 
 	end
 
+	def edit
+	end
+
+	def update
+		if @project.update project_params
+			redirect_to @project, notice: "정상적으로 프로젝트가 수정되었습니다."
+		else
+			render 'edir'
+		end
+	end
+
+	def destroy
+		@project.destroy
+		redirect_to projects_path
+	end
+
 	private
 
 	def find_project
