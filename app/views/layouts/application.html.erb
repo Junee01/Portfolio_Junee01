@@ -11,7 +11,7 @@
 </head>
 <body>
 	<header id="main_navigation" class="clearfix">
-		<a href="#" class="name">Sangjun Park</a>
+		<%= link_to "Sangjun Park", root_path, class: "name" %>
 		<nav>
 			<%= link_to "Articles", posts_path %>
 			<a href="#">Projects</a>
@@ -20,6 +20,16 @@
 	</header>
 
 <%= yield %>
+
+	<footer id="main_footer">
+		<p class="copyright">&copy 2016 Sangjun Park<p>
+			<nav>
+				<a href="https://www.instagram.com/junee.junee/" target="_blank"><i class="fa fa-instagram"></i></a>
+				<a href="https://www.facebook.com/sangjun.park.370" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://github.com/Junee01" target="_blank"><i class="fa fa-github"></i></a>
+				<a href="https://www.youtube.com/watch?v=IIcLVt54niM" target="_blank"><i class="fa fa-youtube"></i></a>
+			</nav>
+	</fotter>
 
 </body>
 </html>
