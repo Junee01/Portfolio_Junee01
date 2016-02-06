@@ -15,8 +15,8 @@
 	<header id="main_navigation" class="clearfix">
 		<%= link_to "Portfolio for Junee01", root_path, class: "name" %>
 		<nav>
-			<%= link_to "포스팅 자료", posts_path %>
-			<%= link_to "프로젝트 자료", projects_path %>
+			<%= link_to "포스팅", posts_path %>
+			<%= link_to "프로젝트", projects_path %>
 			<%= link_to "문의하기", new_contact_path %>
 			<% if user_signed_in? %>
 				<%= link_to "로그아웃", destroy_user_session_path, method: :delete %>
