@@ -199,6 +199,14 @@ input[type="submit"], .button {
 	}	
 }
 
+.img-circle {
+	background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
 @import 'welcome';
 @import 'posts_projects';
 @import 'pygments';

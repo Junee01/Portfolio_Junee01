@@ -18,15 +18,15 @@
 
 	<br><br>
 
-	<%# 이미지 넣는 부분입니다. %>
- 	<%= f.file_field :image %>
-
-	<br><br>
-
 	<%= f.label :link, "프로젝트 링크(GitHub)" %><br>
 	<%= f.text_field :link, :placeholder => "프로젝트에 대한 내용을 볼 수 있는 링크를 입력해주세요." %>
 
 	<br><br>
+
+	<%# 이미지 넣는 부분입니다. %>
+ 	<%= f.file_field :image %>
+
+ 	<br><br><br>
 
 	<%= f.submit "프로젝트 생성" %>
 

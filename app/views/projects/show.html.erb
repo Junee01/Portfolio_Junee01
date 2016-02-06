@@ -25,7 +25,7 @@
 		<%# 프로젝트와 연결된 링크를 기술하는 부분 %>
 		<div class="button_wrapper">
 			<a href="<%= @project.link %>" class="project_button" target="_blank">
-				Visit <%= @project.title %>
+				'<%= @project.title %>' 로 방문하기
 			</a>
 		</div>
 	</div>
@@ -33,11 +33,14 @@
 	<%# 로그인을 한 유저에게만 수정과 삭제의 권한이 주어집니다. %>
 	<% if user_signed_in? %>
 		<div id="admin_links">
-			<%= link_to "Edit", edit_project_path(@project) %>
-			<%= link_to "Delete", project_path(@project), method: :delete, data: { confirm: "Are you sure?" } %>
+			<%= link_to "프로젝트 추가", new_project_path %>
+			<%= link_to "수정하기", edit_project_path(@project) %>
+			<%= link_to "삭제하기", project_path(@project), method: :delete, data: { confirm: "Are you sure?" } %>
 		</div>
 	<% end %>
 
 	<hr>
 
+		<%= render 'disqus' %>
+		
 </div>

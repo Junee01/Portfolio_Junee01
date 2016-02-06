@@ -25,6 +25,7 @@
 	<%# 로그인을 한 유저에게만 수정과 삭제의 권한이 주어진다. %>
 	<% if user_signed_in? %>
 		<div id="admin_links">
+			<%= link_to "포스팅 추가", new_post_path %>
 			<%= link_to "수정하기", edit_post_path(@post) %>
 			<%= link_to "삭제하기", post_path(@post), method: :delete, data: { confirm: "정말로 삭제하시겠습니까?" } %>
 		</div>
