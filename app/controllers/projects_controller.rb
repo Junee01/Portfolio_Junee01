@@ -1,5 +1,7 @@
 class ProjectsController < ApplicationController
 	before_action :find_project, only: [:show, :edit, :update, :destroy]
+	#index, show 페이지는 볼 수 있다.
+	before_action :authenticate_user!, except: [:index, :show]
 
 	def index
 		@projects = Project.all.order("created_at desc")

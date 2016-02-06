@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
 	before_action :find_post, only: [:show, :edit, :update, :destroy]
+	#index, show 페이지는 볼 수 있다.
+	before_action :authenticate_user!, except: [:index, :show]
 
 	def index
 		#현재 두페이지만 하려면 per_page: 2 로 설정하면 된다.
