@@ -6,13 +6,23 @@
 	</header>
 
 	<div id="content">
-		<div class="content_image">
-			<%= image_tag @project.image.url %>
-		</div>
-		<hr>
 
+		<%# 프로젝트에 관한 이미지 %>
+		<%# 만약에 이미지가 없다면 넘어가고, 있다면 보여줍니다. %>
+		<div class="content_image">
+			<% if @project.image.file? %>
+				<%= image_tag @project.image.url %>
+				<hr>
+			<% else %>
+				<%# skip %>
+			<% end %>
+		</div>
+		
+
+		<%# 프로젝트에 관한 내용을 기술하는 부분 %>
 		<%= markdown @project.description %>
 
+		<%# 프로젝트와 연결된 링크를 기술하는 부분 %>
 		<div class="button_wrapper">
 			<a href="<%= @project.link %>" class="project_button" target="_blank">
 				Visit <%= @project.title %>
@@ -20,6 +30,7 @@
 		</div>
 	</div>
 
+	<%# 로그인을 한 유저에게만 수정과 삭제의 권한이 주어집니다. %>
 	<% if user_signed_in? %>
 		<div id="admin_links">
 			<%= link_to "Edit", edit_project_path(@project) %>

@@ -18,7 +18,7 @@ class PostsController < ApplicationController
 		if @post.save
 			redirect_to @post, notice: "정상적으로 저장되었습니다."
 		else
-			render 'new', notice: "비정상 저장오류입니다."
+			render 'new', notice: "비정상 저장 오류입니다."
 		end
 	end
 
@@ -45,7 +45,7 @@ class PostsController < ApplicationController
 	private
 
 	def post_params
-		params.require(:post).permit(:title, :content, :slug)
+		params.require(:post).permit(:title, :content, :slug, :image)
 	end
 
 	def find_post

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>PortfolioJunee01</title>
+	<title>Portfolio Web page for Junee01</title>
+	<%# links for bootstrap, googlefont %>
 	<link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
@@ -10,37 +11,44 @@
 	<%= csrf_meta_tags %>
 </head>
 <body>
+	<%# header part %>
 	<header id="main_navigation" class="clearfix">
-		<%= link_to "Sangjun Park", root_path, class: "name" %>
+		<%= link_to "Sangjun Park(Junee01)", root_path, class: "name" %>
 		<nav>
-			<%= link_to "Articles", posts_path %>
-			<%= link_to "Projects", projects_path %>
-			<%= link_to "Contact", new_contact_path %>
+			<%= link_to "포스팅 자료", posts_path %>
+			<%= link_to "프로젝트 자료", projects_path %>
+			<%= link_to "문의하기", new_contact_path %>
 			<% if user_signed_in? %>
-				<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+				<%= link_to "로그아웃", destroy_user_session_path, method: :delete %>
 			<% else %>
-				<%= link_to "Sign In", new_user_session_path %>
+				<%= link_to "로그인 하기", new_user_session_path %>
 			<% end %>
 		</nav>
 	</header>
+	<%# header part end %>
 
+	<%# 경고 메시지가 뜨면 보여준다는 의미 %>
 	<% if notice %>
 		<p class="notice"><%= notice %></p>
 	<% elsif alert %>
        <p class="alert"><%= alert %></p>
  	<% end %>
 
+<%# 실제 내용들을 partial 로 가져올 부분이다. %>
 <%= yield %>
 
+	<%# footer part %>
 	<footer id="main_footer">
-		<p class="copyright">&copy 2016 Sangjun Park<p>
+		<p class="copyright">&copy 2016 Sangjun Park(Junee01)<p>
 			<nav>
 				<a href="https://www.instagram.com/junee.junee/" target="_blank"><i class="fa fa-instagram"></i></a>
 				<a href="https://www.facebook.com/sangjun.park.370" target="_blank"><i class="fa fa-facebook"></i></a>
 				<a href="https://github.com/Junee01" target="_blank"><i class="fa fa-github"></i></a>
+				<a href="http://blog.naver.com/potter777777" target="_blank"><i class="fa fa-pencil-square-o"></i></a>
 				<a href="https://www.youtube.com/watch?v=IIcLVt54niM" target="_blank"><i class="fa fa-youtube"></i></a>
 			</nav>
 	</fotter>
+	<%# footer part end %>
 
 </body>
 </html>

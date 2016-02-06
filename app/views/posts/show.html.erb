@@ -6,23 +6,37 @@
 	</header>
 
 	<div id="content">
+
+		<%# 포스팅에 관한 이미지 %>
+		<%# 만약에 이미지가 없다면 넘어가고, 있다면 보여줍니다. %>
+		<div class="content_image">
+			<% if @post.image.file? %>
+				<%= image_tag @post.image.url %>
+				<hr>
+			<% else %>
+				<%# skip %>
+			<% end %>
+		</div>
+
+		<%# content 내용을 markdown 을 이용하여 특수효과를 넣어 보여준다. %>
 		<%= markdown @post.content %>
 	</div>
 
+	<%# 로그인을 한 유저에게만 수정과 삭제의 권한이 주어진다. %>
 	<% if user_signed_in? %>
 		<div id="admin_links">
-			<%= link_to "Edit Article", edit_post_path(@post) %>
-			<%= link_to "Delete Article", post_path(@post), method: :delete, data: { confirm: "Are you sure?"} %>
+			<%= link_to "수정하기", edit_post_path(@post) %>
+			<%= link_to "삭제하기", post_path(@post), method: :delete, data: { confirm: "정말로 삭제하시겠습니까?" } %>
 		</div>
 	<% end %>
 
 	<hr>
 
 	<div id="share_box">
-		<p>Share The Do List</p>
-		<!-- Twitter -->
+		<p>공유하기</p>
+		<!-- Twitter 으로 공유하기 -->
 		<a onclick="javascript:window.open('http://twitter.com/share?text=<%= @post.title %> by @sangjunpark - &amp;url=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-twitter"></i></a>
-		<!-- Facebook -->
+		<!-- Facebook 으로 공유하기 -->
 	    <a onclick="javascript:window.open('http://www.facebook.com/sharer.php?u=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-facebook"></i></a>
 	</div>
 

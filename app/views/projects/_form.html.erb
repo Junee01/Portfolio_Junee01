@@ -8,13 +8,13 @@
 		</ul>
 	<% end %>
 
-	<%= f.label :title, "Project Name" %><br>
-	<%= f.text_field :title, :placeholder => "Please enter the title" %>
+	<%= f.label :title, "프로젝트 주제" %><br>
+	<%= f.text_field :title, :placeholder => "프로젝트 주제를 입력해주세요." %>
 
 	<br><br>
 
-	<%= f.label :description, "Project description" %><br>
-	<%= f.text_area :description, :placeholder => "Please enter the description" %>
+	<%= f.label :description, "프로젝트 설명" %><br>
+	<%= f.text_area :description, :placeholder => "프로젝트에 대한 설명을 기술해주세요." %>
 
 	<br><br>
 
@@ -23,11 +23,11 @@
 
 	<br><br>
 
-	<%= f.label :link, "Project link" %><br>
-	<%= f.text_field :link, :placeholder => "Please enter the links" %>
+	<%= f.label :link, "프로젝트 링크(GitHub)" %><br>
+	<%= f.text_field :link, :placeholder => "프로젝트에 대한 내용을 볼 수 있는 링크를 입력해주세요." %>
 
 	<br><br>
 
-	<%= f.submit %>
+	<%= f.submit "프로젝트 생성" %>
 
 <% end %>

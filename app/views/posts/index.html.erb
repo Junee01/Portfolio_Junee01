@@ -1,8 +1,9 @@
-<h1 id="page_title">Stuff I've Written</h1>
+<h1 id="page_title">블로그에 포스팅한 자료모음</h1>
 
 <div id="posts_wrapper" class="skinny_wrapper">
 	<% @posts.each do |post| %>
 		<div class="post">
+			<%# 작성일을 기준으로 얼마나 지났는지 확인하여 보여준다. %>
 			<p class="date"><%= post.created_at.strftime('%A, %B %d') %></p>
 			<h2><a href="#"><%= link_to post.title, post %></a></h2>
 			<hr>
@@ -12,9 +13,10 @@
 	<%# 로그인한 사람만 새로운 포스팅을 할 수 있다. %>
 	<% if user_signed_in? %>
 		<div id="admin_links">
-			<%= link_to "New Post", new_post_path %>
+			<%= link_to "새로운 포스팅 하기", new_post_path %>
 		</div>
 	<% end %>
 </div>
 
+<%# pagination function %>
 <%= will_paginate @posts %>
