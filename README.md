@@ -1,1 +1,48 @@
-이 곳에 적을 내용은 프로젝트를 마치고 업데이트 합니다.
+이 프로젝트는 '개인 포트폴리오를 만드는 것을 목적'으로 합니다.
+
+<주요 기능>
+	
+	1. 포스트, 프로젝트에 대한 포스팅 기능
+	2. Contact 기능(Sendgrid)
+	3. 기본적인 CRUD 기능
+	4. 회원가입, 로그인 기능
+	5. 공유하기 기능(twitter, facebook)
+	6. 댓글 달기 기능(Disqus)
+	7. 텍스트 Markdown & Highlighting 기능(pygments, redcarpet)
+	8. pagination 기능(will_paginate)
+	9, 각각의 title 로 url 주소 생성(friendly_id)
+	10. 이미지 업로드 기능(paperclip)
+
+사용한 언어 : Ruby, Ruby on Rails
+
+사용한 잼 : 
+
+	1. pygmenets.rb gem
+	2. redcarpet gem
+	3. friendly_id gem
+	4. will_paginate gem
+	5. mail_form gem
+	6. devise gem
+	7. paperclip gem
+
+
+<개발 환경>
+
+Front-end : Bootstrap, Disqus, Awesome-font, html5, CSS, javascript
+
+사용한 도구 : sublimetext 2(free version)
+
+OS : MAC OS X 10.11.3
+
+Deploy : Heroku(Cloud Server)
+
+제작 소요시간 : 약 30시간(2016.02.05~2016.02.06)
+
+
+완성된 작품은 아래 주소에서 확인할 수 있습니다.
+
+URL : "https://portfolio-junee01.herokuapp.com"
+
+(Mackenziechild.me 의 Blog & Portfolio 강의를 참고하여 제작되었습니다.)
+
+추가로 질문(Asset Pipeline)에 응해주신, Ruby on Rails, korea 커뮤니티의 김수림님 감사드립니다.
