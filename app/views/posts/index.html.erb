@@ -8,6 +8,13 @@
 			<hr>
 		</div>
 	<% end %>
+
+	<%# 로그인한 사람만 새로운 포스팅을 할 수 있다. %>
+	<% if user_signed_in? %>
+		<div id="admin_links">
+			<%= link_to "New Post", new_post_path %>
+		</div>
+	<% end %>
 </div>
 
 <%= will_paginate @posts %>

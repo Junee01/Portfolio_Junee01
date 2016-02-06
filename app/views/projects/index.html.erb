@@ -8,4 +8,10 @@
 			<hr>
 		</div>
 	<% end %>
+
+	<% if user_signed_in? %>
+		<div id="admin_links">
+			<%= link_to "New Project", new_project_path %>
+		</div>
+	<% end %>
 </div>

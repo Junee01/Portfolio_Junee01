@@ -8,13 +8,13 @@
 		</ul>
 	<% end %>
 
-	<%= f.label :title %><br>
-	<%= f.text_field :title %>
+	<%= f.label :title, "Post name" %><br>
+	<%= f.text_field :title, :placeholder => "Please enter the post name" %>
 
 	<br><br>
 
 	<%= f.label :content, "Write your artivle here" %><br>
-	<%= f.text_area :content %>
+	<%= f.text_area :content, :placeholder => "Please enter the posts" %>
 
 	<br><br>
 

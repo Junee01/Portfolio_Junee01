@@ -6,6 +6,11 @@
 	</header>
 
 	<div id="content">
+		<div class="content_image">
+			<%= image_tag @project.image.url %>
+		</div>
+		<hr>
+
 		<%= markdown @project.description %>
 
 		<div class="button_wrapper">

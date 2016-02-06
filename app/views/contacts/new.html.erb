@@ -2,18 +2,18 @@
 
 <div class="skinny_wrapper wrapper_padding">
 	<%= form_for @contact do |f| %>
-		<%= f.label :name %><br>
-		<%= f.text_field :name, required: true %>
+		<%= f.label :name, "이름" %><br>
+		<%= f.text_field :name, required: true, :placeholder => "이름을 입력해주세요." %>
 
 		<br>
 
-		<%= f.label :email %><br>
-		<%= f.email_field :email, required: true %>
+		<%= f.label :email, "이메일" %><br>
+		<%= f.email_field :email, required: true, :placeholder => "이메일을 입력해주세요." %>
 
 		<br>
 
-		<%= f.label :message %><br>
-		<%= f.text_area :message, as: :text %>
+		<%= f.label :message, "내용" %><br>
+		<%= f.text_area :message, as: :text, :placeholder => "내용을 입력해주세요." %>
 
 		<div class="hidden">
 			<%= f.label :nickname %><br>

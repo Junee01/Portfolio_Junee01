@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160206021249) do
+ActiveRecord::Schema.define(version: 20160206031424) do
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
@@ -27,9 +27,13 @@ ActiveRecord::Schema.define(version: 20160206021249) do
     t.string   "title"
     t.text     "description"
     t.string   "link"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.string   "slug"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_index "projects", ["slug"], name: "index_projects_on_slug", unique: true
