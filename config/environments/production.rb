@@ -90,4 +90,6 @@ Rails.application.configure do
     :domain         => 'heroku.com',
     :enable_starttls_auto => true
   }
+
+  Paperclip.options[:command_path] = "/usr/local/bin/"
 end
