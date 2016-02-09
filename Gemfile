@@ -25,9 +25,6 @@ gem 'devise', '~> 3.5', '>= 3.5.6'
 gem 'paperclip', '~> 4.3', '>= 4.3.4'
 #AWS
 gem 'aws-sdk', '~> 2.2', '>= 2.2.14'
-gem 'fog', '~> 1.37'
-gem "figaro"
-
 
 group :development, :test do
   gem 'byebug'
