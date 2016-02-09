@@ -23,10 +23,7 @@ Rails.application.configure do
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
   
-
   config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
-
-
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
@@ -82,7 +79,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Sendgrid 로 메일 보내기 위한 밑 작업
-  config.action_mailer.default_url_options = { host: 'https://vast-spire-21505.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'https://portfolio-junee01.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
 
   ActionMailer::Base.smtp_settings = {
@@ -96,4 +93,14 @@ Rails.application.configure do
   }
 
   Paperclip.options[:command_path] = "/usr/local/bin/"
+
+  #Sets Paperclip to upload images to Amazon S3
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => ENV['AWS_BUCKET'],
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    }
+  }
 end

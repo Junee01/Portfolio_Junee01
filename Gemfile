@@ -23,7 +23,8 @@ gem 'mail_form', '~> 1.5', '>= 1.5.1'
 gem 'devise', '~> 3.5', '>= 3.5.6'
 #paperclip gem
 gem 'paperclip', '~> 4.3', '>= 4.3.4'
-#AWS
+
+gem 'aws-sdk', '< 3.0'
 
 group :development, :test do
   gem 'byebug'
