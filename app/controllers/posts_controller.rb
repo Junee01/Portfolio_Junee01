@@ -5,7 +5,7 @@ class PostsController < ApplicationController
 
 	def index
 		#현재 두페이지만 하려면 per_page: 2 로 설정하면 된다.
-		@posts = Post.all.order("created_at desc").paginate(page: params[:page], per_page: 2)
+		@posts = Post.all.order("created_at desc").paginate(page: params[:page], per_page: 3)
 	end
 
 	def new
