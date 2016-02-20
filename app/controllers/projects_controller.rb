@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
 	before_action :authenticate_user!, except: [:index, :show]
 
 	def index
-		@projects = Project.all.order("created_at desc").paginate(page: params[:page], per_page: 2)
+		@projects = Project.all.order("created_at desc").paginate(page: params[:page], per_page: 3)
 	end
 
 	def new
