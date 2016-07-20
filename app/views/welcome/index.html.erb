@@ -2,26 +2,23 @@
 	<div class="col-1 about homepage_content">
 		<h2>소개</h2>
 		<hr>
-		<%= image_tag 'junee160228.jpg', alt: 'Junee', class: "img-circle" %>
+		<%= image_tag 'Junee01.gif', alt: 'Junee', class: "img-circle" %>
 		<br><br>
-		<p>이름 : <strong>박상준</strong></p>
-		<p>생년월일 : 1991.02.03<strong>(26)</strong></p>
-		<p>전공 : Computer Engineering</p>
+		<p>이름 : 박상준(Sangjun Park)</p>
+		<p>전공 : 컴퓨터 공학(Computre Science)</p>
 		<hr>
-		<h2>관심분야</h2>
+		<h2>할 수 있는 것들</h2>
 		<ul>
-			<li><strong>Ruby, Ruby on Rails</strong></li>
-			<li><strong>Python</strong>, Django</li>
-			<li>C, C++, <strong>C#, Winform, Metro</strong></li>
-			<li><strong>Java</strong>, Spring</li>
-			<li>Object-oriented programming</li>
-			<li>Android, <strong>iOS</strong></li>
-			<li><strong>HTML5, CSS3, Javascript, jQuery</strong></li>
-			<li><strong>APM(Apache, php, MySQL)</strong></li>
+			<li>C, C#, Java, Ruby, Python, Swift</li>
+			<li>HTML, CSS, JavaScript, jQuery</li>
+			<li>Rails 4, Bootstrap, Metro</li>
+			<li>MySQL</li>
+			<li>웹 크롤링(Web Scraping)</li>
+			<li>웹 개발자</li>
 		</ul>
 	</div>
 	<div class="col-2 homepage_content">
-		<h2>포스팅 자료 모음</h2>
+		<h2>블로그 포스팅 자료</h2>
 		<hr>
 
 		<% @posts.each do |post| %>
@@ -30,7 +27,7 @@
 		<% end %>
 	</div>
 	<div class="col-3 homepage_content">	
-		<h2>프로젝트 자료 모음</h2>
+		<h2>프로젝트 자료</h2>
 		<hr>
 
 		<% @projects.each do |project| %>
