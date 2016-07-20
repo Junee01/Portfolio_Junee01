@@ -1,4 +1,4 @@
-= 개임 포트폴리오 페이지
+= 개인 포트폴리오 페이지
 
 이 프로젝트는 '개인 포트폴리오'로 사용될 것입니다.
 
@@ -12,7 +12,7 @@
 6. 댓글 달기 기능(Disqus)
 7. 텍스트 Markdown & Highlighting 기능(pygments, redcarpet)
 8. pagination 기능(will_paginate)
-9, 각각의 title 로 url 주소 생성(friendly_id)
+9. 각각의 title 로 url 주소 생성(friendly_id)
 10. 이미지 업로드 기능(paperclip)
 
 ==사용한 언어와 프레임워크
