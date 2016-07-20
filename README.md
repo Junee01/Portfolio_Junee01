@@ -1,32 +1,36 @@
-이 프로젝트는 '개인 포트폴리오를 만드는 것을 목적'으로 합니다.
+= 개임 포트폴리오 페이지
 
-<주요 기능>
+이 프로젝트는 '개인 포트폴리오'로 사용될 것입니다.
+
+==주요 기능
 	
-	1. 포스트, 프로젝트에 대한 포스팅 기능
-	2. Contact 기능(Sendgrid)
-	3. 기본적인 CRUD 기능
-	4. 회원가입, 로그인 기능
-	5. 공유하기 기능(twitter, facebook)
-	6. 댓글 달기 기능(Disqus)
-	7. 텍스트 Markdown & Highlighting 기능(pygments, redcarpet)
-	8. pagination 기능(will_paginate)
-	9, 각각의 title 로 url 주소 생성(friendly_id)
-	10. 이미지 업로드 기능(paperclip)
+1. 포스트, 프로젝트에 대한 포스팅 기능
+2. Contact 기능(Sendgrid)
+3. 기본적인 CRUD 기능
+4. 회원가입, 로그인 기능
+5. 공유하기 기능(twitter, facebook)
+6. 댓글 달기 기능(Disqus)
+7. 텍스트 Markdown & Highlighting 기능(pygments, redcarpet)
+8. pagination 기능(will_paginate)
+9, 각각의 title 로 url 주소 생성(friendly_id)
+10. 이미지 업로드 기능(paperclip)
 
-사용한 언어 : Ruby, Ruby on Rails
+==사용한 언어와 프레임워크
 
-사용한 잼 : 
+1. Ruby, Ruby on Rails
 
-	1. pygmenets.rb gem
-	2. redcarpet gem
-	3. friendly_id gem
-	4. will_paginate gem
-	5. mail_form gem
-	6. devise gem
-	7. paperclip gem
+==사용한 잼
+
+1. pygmenets.rb gem
+2. redcarpet gem
+3. friendly_id gem
+4. will_paginate gem
+5. mail_form gem
+6. devise gem
+7. paperclip gem
 
 
-<개발 환경>
+==개발 환경
 
 Front-end : Bootstrap, Disqus, Awesome-font, html5, CSS, javascript
 
@@ -38,6 +42,7 @@ Deploy : Heroku(Cloud Server)
 
 제작 소요시간 : 약 30시간(2016.02.05~2016.02.06)
 
+=
 
 완성된 작품은 아래 주소에서 확인할 수 있습니다.
 
