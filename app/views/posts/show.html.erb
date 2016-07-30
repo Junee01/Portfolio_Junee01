@@ -45,7 +45,7 @@
 	<hr>
 
 	<%# 이력서 부분은 Disqus가 아닌 시지온의 라이브리를 적용해본다. %>
-	<% if @post.title != "Resume with Markdown" %>
+	<% if @post.title != "Resume with Markdown" || @post.title != "이력서" %>
 		<div id="share_box">
 			<p>공유하기</p>
 			<!-- Twitter 으로 공유하기 -->
