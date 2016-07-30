@@ -2,6 +2,9 @@
 
 <div id="posts_wrapper" class="skinny_wrapper">
 	<% @posts.each do |post| %>
+		<% if post.title == "Resume with Markdown" %>
+		<% next %>
+		<% end %>
 		<div class="post">
 			<%# 작성일을 기준으로 얼마나 지났는지 확인하여 보여준다. %>
 			<p class="date"><%= post.created_at.strftime('%A, %B %d') %></p>
