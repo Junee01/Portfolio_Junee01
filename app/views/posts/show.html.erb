@@ -20,7 +20,8 @@
 
 		<%# content 내용을 markdown 을 이용하여 특수효과를 넣어 보여준다. %>
 		<%= markdown @post.content %>
-
+		
+		<%# 이력서 페이지는 Show 페이지가 다르게 표시됩니다. 끝 부분에 서로로 연결되는 버튼이 추가됩니다. %>
 		<% if @post.title == "이력서" %>
 			<div class="button_wrapper">
 				<%= link_to "영문 이력서 보기", post_path("resume"), :class => "post_button" %>
