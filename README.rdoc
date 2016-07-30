@@ -34,7 +34,7 @@
 
 Front-end : Bootstrap, Disqus, Awesome-font, html5, CSS, javascript
 
-사용한 도구 : sublimetext 2(free version)
+사용한 도구 : sublimetext 2
 
 OS : MAC OS X 10.11.3
 
