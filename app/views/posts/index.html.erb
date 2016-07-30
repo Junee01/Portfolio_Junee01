@@ -2,6 +2,7 @@
 
 <div id="posts_wrapper" class="skinny_wrapper">
 	<% @posts.each do |post| %>
+		<%# 제목이 "Resume with Markdown"인 포스트는 목록에 보여주지 않는다. %>
 		<% if post.title == "Resume with Markdown" %>
 		<% next %>
 		<% end %>
