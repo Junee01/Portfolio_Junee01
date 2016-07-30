@@ -23,11 +23,11 @@
 
 		<% if @post.title == "이력서" %>
 			<div class="button_wrapper">
-				<a href="<%= post_path("Resume") %>" class="post_button" target="_blank">영문 이력서 보기</a>
+				<%= link_to "영문 이력서 보기", post_path("resume"), :class => "post_button" %>
 			</div>
 		<% elsif @post.title == "Resume with Markdown" %>
 			<div class="button_wrapper">
-				<a href="<%= post_path("95f3fb02-5d36-4e3d-a837-fa842696e184") %>" class="post_button" target="_blank">한글 이력서 보기</a>
+				<%= link_to "한글 이력서 보기", post_path("95f3fb02-5d36-4e3d-a837-fa842696e184"), :class => "post_button" %>
 			</div>
 		<% end %>
 	</div>
