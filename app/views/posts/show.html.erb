@@ -20,6 +20,16 @@
 
 		<%# content 내용을 markdown 을 이용하여 특수효과를 넣어 보여준다. %>
 		<%= markdown @post.content %>
+
+		<% if @post.title == "이력서" %>
+			<div class="button_wrapper">
+				<a href="<%= post_path("Resume") %>" class="post_button" target="_blank">영문 이력서 보기</a>
+			</div>
+		<% elsif @post.title == "Resume with Markdown" %>
+			<div class="button_wrapper">
+				<a href="<%= post_path("95f3fb02-5d36-4e3d-a837-fa842696e184") %>" class="post_button" target="_blank">한글 이력서 보기</a>
+			</div>
+		<% end %>
 	</div>
 
 	<%# 로그인을 한 유저에게만 수정과 삭제의 권한이 주어진다. %>
