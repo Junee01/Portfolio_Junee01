@@ -33,16 +33,18 @@
 
 	<hr>
 
-	<div id="share_box">
-		<p>공유하기</p>
-		<!-- Twitter 으로 공유하기 -->
-		<a onclick="javascript:window.open('http://twitter.com/share?text=<%= @post.title %> by @sangjunpark - &amp;url=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-twitter"></i></a>
-		<!-- Facebook 으로 공유하기 -->
-	    <a onclick="javascript:window.open('http://www.facebook.com/sharer.php?u=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-facebook"></i></a>
-	</div>
-
-	<hr>
+	<%# 이력서 부분은 Disqus가 아닌 시지온의 라이브리를 적용해본다. %>
 	<% if @post.title != "Resume with Markdown" %>
+		<div id="share_box">
+			<p>공유하기</p>
+			<!-- Twitter 으로 공유하기 -->
+			<a onclick="javascript:window.open('http://twitter.com/share?text=<%= @post.title %> by @sangjunpark - &amp;url=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-twitter"></i></a>
+			<!-- Facebook 으로 공유하기 -->
+		    <a onclick="javascript:window.open('http://www.facebook.com/sharer.php?u=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-facebook"></i></a>
+		</div>
+
+		<hr>
+
 		<%= render 'disqus' %>
 	<% else %>
 		<!-- 라이브리 시티 설치 코드 -->
